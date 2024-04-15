@@ -1,4 +1,4 @@
-# Nesta diretório você encontrará todo o conteúdo e práticas que adquiri ao longo do evento ministrado por Fabrício Veronez.
+# Neste diretório você encontrará todo o conteúdo e práticas que adquiri ao longo do evento DevOps4Devs ministrado por Fabrício Veronez.
 
 # Resumo:
 Ao final deste curso somos capazes de entender e subir uma aplicação em um ambiente totalmente escalável e gerenciavel.
