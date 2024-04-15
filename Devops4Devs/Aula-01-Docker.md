@@ -9,7 +9,7 @@ Entender e praticar a utilização de containers através do Docker e Docker Hub
   WSL.
 * Docker<br>
   Instalado diretamento em sua distro WSL ou Docker Desktop instalado em seu SO.
-  Certifique-se de criar um arquivo .wslconfig no diretório de seu usuário contendo as deguintes seclarações para limitação de CPU e Memória:<br>
+  Certifique-se de criar um arquivo .wslconfig no diretório de seu usuário contendo as seguintes declarações para limitação de CPU e Memória:<br>
   \# Settings apply across all Linnux distros running on WSL 2<br>
   [wsl2]
 * Node.js e o gerenciador de pacote NPM instalado.<br>
