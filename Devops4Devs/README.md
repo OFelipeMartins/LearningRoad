@@ -1,15 +1,14 @@
-Nesta pasta você encontrará todo o aprendizado que adquiri ao longo do evento ministrado por Fabrício Veronez.
+# Nesta diretório você encontrará todo o conteúdo e práticas que adquiri ao longo do evento ministrado por Fabrício Veronez.
 
-Resumo:
-Criaremos um portal de noticías escrito em node.js com um banco de dados Postgre SQL
-
-# Aula 01 - Docker #
-
-
-# Aula 01 - Kubernetes #
-
-
-# Aula 01 - Ambiente Cloud (AWS | Google | Azure #
-
+# Resumo:
+Ao final deste curso somos capazes de entender e subir uma aplicação em um ambiente totalmente escalável e gerenciavel.
 
 # Aula 01 - Docker #
+
+# Aula 02 - Kubernetes #
+
+# Aula 03 - Ambiente Cloud (AWS | Google | Azure #
+
+# Aula 04 - Promethues e Grafana #
+
+# Aula 05 - ArgoCG #
