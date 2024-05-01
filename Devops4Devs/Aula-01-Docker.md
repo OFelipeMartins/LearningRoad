@@ -46,17 +46,18 @@ Entender e praticar a utilização de containers através do Docker e Docker Hub
   * Tente remover seus containers em execução com o comando já utilizado, porém,, agora com o parâmetro -f para forçar o stop dos containers para que seja possível efetivamente removê-lo:<br>
     docker container rm <CONTAINER ID | NAME> <b>-f</b><br>
 
-# Parte 3 - Clonando a aplicação do Portal de Notícias e 
-  * Clone o projeto do portal de notícia
-    git clone https://github.com/KubeDev/devops4devs-01.git
-  * Edite se necessário o arquivo devops4devs-01/src/models/post.js com as declarações corretas das variáveis de ambiente nas linhas 3, 4 e 5.
-  * Acesse o diretório do scr e baixe os pacotes necessários para a aplicação:
-      cd devops4devs-01/src
-      npm install
-  * Ainda dentro deste diretório, rode a aplicação de forma externa, sem o uso de containers:
-      node server.js
-    * Acesse a aplicação no seu navegador:
-        localhost:8080
+# Parte 3 - Clonando a aplicação do Portal de Notícias.<br>
+  * Clone o projeto do portal de notícia<br>
+    git clone https://github.com/KubeDev/devops4devs-01.git<br>
+  * Edite se necessário o arquivo devops4devs-01/src/models/post.js com as declarações corretas das variáveis de ambiente nas linhas 3, 4 e 5.<br>
+  * Acesse o diretório do scr e baixe os pacotes necessários para a aplicação:<br>
+      cd devops4devs-01/src<br>
+      npm install<br>
+  * Ainda dentro deste diretório, rode a aplicação de forma externa, sem o uso de containers:<br>
+      node server.js<br>
+    * Acesse a aplicação no seu navegador:<br>
+        localhost:8080<br>
+        
 
 
 
