@@ -41,15 +41,22 @@ Entender e praticar a utilização de containers através do Docker e Docker Hub
   * Acessando o terminal do container:<br>
     docker container exec -it <CONTAINER ID | NAME> /bin/bash<br>
   * Com isso é possível acessar o banco de dados via terminal, mas não é a melhor forma. Saia do terminal com o comando exit e vamos subir outro container de uma forma que possamos acessa o banco de dados por meio de uma aplicação local como DBeaver. Para isso vamos declarar uma novo parâmetro -p para definirmos as portas que usaremos de nossa máquina para a porta do container.<br>
-    docker container run -d <b>-p 5432:5432</b> -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DN=news postgres<br>
+    docker container run -d <b>-p 5432:5432</b> -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DB=news postgres<br>
   * Abra o DBeaver em sua máquina, faça a conexão com o Postgres e coloque suas credenciais definidas pelas variáveis de ambiente.   
-  * Tente remover seus containers em execução com o comando já utilizado, porém,, agora com o parâmetro -f para forçar o stop dos container para que seja possível efetivamente removê-lo:<br>
+  * Tente remover seus containers em execução com o comando já utilizado, porém,, agora com o parâmetro -f para forçar o stop dos containers para que seja possível efetivamente removê-lo:<br>
     docker container rm <CONTAINER ID | NAME> <b>-f</b><br>
 
 # Parte 3 - Clonando a aplicação do Portal de Notícias e 
-    
-
-
+  * Clone o projeto do portal de notícia
+    git clone https://github.com/KubeDev/devops4devs-01.git
+  * Edite se necessário o arquivo devops4devs-01/src/models/post.js com as declarações corretas das variáveis de ambiente nas linhas 3, 4 e 5.
+  * Acesse o diretório do scr e baixe os pacotes necessários para a aplicação:
+      cd devops4devs-01/src
+      npm install
+  * Ainda dentro deste diretório, rode a aplicação de forma externa, sem o uso de containers:
+      node server.js
+    * Acesse a aplicação no seu navegador:
+        localhost:8080
 
 
 
