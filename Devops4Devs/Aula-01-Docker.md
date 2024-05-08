@@ -2,7 +2,7 @@
 Nesta aula veremos o que são Containers e como o Docker facilita nossa criação e gestão destes container.
 
 # Objetivos:<br>
-Entender e praticar a utilização de containers através do Docker e Docker Hub para gerenciar as imagens que criaremos de nossos containers.
+Entender e praticar criação de containers com Docker, usando um ambiente linux virtualizado com WSL e usando Docker Hub para gerenciar as imagens que criaremos de nossos containers.
 
 # Requisitos:<br>
 * Um ambiente linux.<br>
