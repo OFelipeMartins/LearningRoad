@@ -72,7 +72,7 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
       * Criaremos uma imagem docker de uma aplicação mais simplificada com uso do dockerfile.
       * Baixe o repositório da aplicação Conversão de tempertatura:<br>
         git clone https://github.com/KubeDev/conversao-temperatura<br>
-        Uma aplicação bem simples, escrita em node.js, utilizando as prinipais bibliotecas que também utilzaremos na aplicação final desta maratona, então server perfeitamente como exemplo para este propósito de criação de imagem:
+        Uma aplicação bem simples, escrita em node.js, utilizando as prinipais bibliotecas que também utilzaremos na aplicação final desta maratona, então serve perfeitamente como exemplo para este propósito desta Parte 4 para criação de imagem:
         
 
 
