@@ -9,8 +9,8 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
   WSL.
 * [Node.js e o gerenciador de pacote NPM instalado](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl).<br>
 * Docker<br>
-  Instalado diretamento em sua distro WSL ou Docker Desktop instalado em seu SO.<br>
-  Certifique-se de criar um arquivo .wslconfig no diretório de seu usuário contendo as seguintes declarações para limitação de CPU e Memória:<br>
+  [Instalado diretamento em sua distro WSL ou Docker Desktop instalado em seu SO](https://www.youtube.com/live/2X61S4mf6is?si=W-_caH2scFlPAETO&t=4392).<br>
+  Certifique-se de [criar um arquivo .wslconfig](https://www.youtube.com/live/O813vtoaXmc?si=NNkHa2n44eA20Itb&t=5427) no diretório de seu usuário contendo as seguintes declarações para limitação de CPU e Memória:<br>
   \# Settings apply across all Linnux distros running on WSL 2<br>
   [wsl2]
   
