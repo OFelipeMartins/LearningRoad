@@ -6,7 +6,7 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
 
 # Requisitos:<br>
 * Um ambiente linux.<br>
-  WSL.
+  [WSL](https://www.youtube.com/watch?v=2X61S4mf6is&pp=ygUVZmFicsOtY2lvIHZlcm9uZXogd3Ns).
 * [Node.js e o gerenciador de pacote NPM instalado](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl).<br>
 * Docker<br>
   [Instalado diretamento em sua distro WSL ou Docker Desktop instalado em seu SO](https://www.youtube.com/live/2X61S4mf6is?si=W-_caH2scFlPAETO&t=4392).<br>
