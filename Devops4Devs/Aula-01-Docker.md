@@ -63,14 +63,14 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
     * Se você ainda estiver com o banco de dados rodando em container, confira dentro de Banco de dados > News > Schemme > public > Tabelas > Post > Botão direito > Ver dados
       * Confira o registro do seu post
     * Este foi um exemplo de uma aplicação rodando localmento usando um banco de dados rodando em container.
-# Parte 4 - Entendo a criação de containers.
+# Parte 4 - Entendendo a criação de containers.
   * Toda vez que criamos um container, utilizamos de uma imagem como base que contém todos os arquivos necessários para executar nosso processo de forma isolada no container. Então uma imagem, nada mais é, do que um file system para criação do container.
   * Para criármos uma imagem de container temos duas abordagens:
     * Docker Commit (Pior formar)
     * Dockerfile (Melhor que a anterior e a que usaremos)
-      * Um arquivo que criamos junto com o projeto, uma receitade bolo para criação do container, com todas as intruções e passo a passo para criamos a imagem da melhor forma possível.
+      * Dockerfile é um arquivo que criamos junto com o projeto, uma receita de bolo para criação do container, com todas as intruções e passo a passo para criármos a imagem da melhor forma possível.
       * Criaremos uma imagem docker de uma aplicação mais simplificada com uso do dockerfile.
-      * Baixe o repositório da aplicação Conversão de tempertatura:
+      * Baixe o repositório da aplicação Conversão de tempertatura:<br>
         git clone https://github.com/KubeDev/conversao-temperatura<br>
         Uma aplicação bem simples, escrita em node.js, utilizando as prinipais bibliotecas que também utilzaremos na aplicação final desta maratona, então server perfeitamente como exemplo para este propósito de criação de imagem:
         
