@@ -34,7 +34,7 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
   * Remova seu container:<br>
     docker container rm <CONTAINER ID | NAME><br>
 
-  * Container de banco de dados com imagem do postres e suas variáveis de ambiente declaradas após cada "-e":<br>
+  * Container de banco de dados com imagem do postgres e suas variáveis de ambiente declaradas após cada "-e":<br>
     docker container run -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DN=news postgres<br>
   * Você deve reparar que seu terminal ficará travado. Para que seu terminal fique sempre disponível, devemos declarar a variável -d para que possamos rodar nossos container de forma "detach", rodando em background. Cancele o container em execução e libere seu terminal com Ctrl+C. Após liberado, executo o mesmo comando porém agora em modo detach.<br>    
     docker container run <b>-d</b> -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DN=news postgres<br>
