@@ -36,15 +36,15 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
 
   * Container de banco de dados com imagem do postgres e suas variáveis de ambiente declaradas após cada "-e":<br>
     `docker container run -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DN=news postgres`
-  * Você deve reparar que seu terminal ficará travado. Para que seu terminal fique sempre disponível, devemos declarar a variável -d para que possamos rodar nossos container de forma "detach", rodando em background. Cancele o container em execução e libere seu terminal com Ctrl+C. Após liberado, executo o mesmo comando porém agora em modo detach.<br>    
-    `docker container run <b>-d</b> -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DN=news postgres`
+  * Você deve reparar que seu terminal ficará travado. Para que seu terminal fique sempre disponível, devemos declarar a variável -d para que possamos rodar nossos container de forma "detach", rodando em background. Cancele o container em execução e libere seu terminal com Ctrl+C. Após liberado, executo o mesmo comando porém agora em modo detach (-d).<br>    
+    `docker container run -d -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DN=news postgres`
   * Acessando o terminal do container:<br>
     `docker container exec -it <CONTAINER ID | NAME> /bin/bash`
-  * Com isso é possível acessar o banco de dados via terminal, mas não é a melhor forma. Saia do terminal com o comando exit e vamos subir outro container de uma forma que possamos acessa o banco de dados por meio de uma aplicação local como DBeaver. Para isso vamos declarar uma novo parâmetro -p para definirmos as portas que usaremos de nossa máquina para a porta do container.<br>
-    `docker container run -d <b>-p 5432:5432</b> -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DB=news postgres`
+  * Com isso é possível acessar o banco de dados via terminal, mas não é a melhor forma. Saia do terminal com o comando exit e vamos subir outro container de uma forma que possamos acessa o banco de dados por meio de uma aplicação local como DBeaver. Para isso vamos declarar uma novo parâmetro -p para definirmos as portas que usaremos de nossa máquina para a porta do container(-p 5432:5432).<br>
+    `docker container run -d -p 5432:5432 -e POSTGRES_PASSWORD=newspwd -e POSTGRES_USER=newsuser -e POSTGRES_DB=news postgres`
   * Abra o DBeaver em sua máquina, faça a conexão com o Postgres e coloque suas credenciais definidas pelas variáveis de ambiente.   
   * Tente remover seus containers em execução com o comando já utilizado, porém, agora com o parâmetro -f para forçar o stop dos containers para que seja possível efetivamente removê-lo:<br>
-    `docker container rm <CONTAINER ID | NAME> <b>-f</b>`
+    `docker container rm <CONTAINER ID | NAME> -f`
 
 # Parte 3 - Clonando a aplicação do Portal de Notícias.<br>
   * Clone o projeto do portal de notícias.<br>
