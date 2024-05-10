@@ -63,7 +63,7 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
     * Se você ainda estiver com o banco de dados rodando em container, confira dentro de Banco de dados > News > Schemme > public > Tabelas > Post > Botão direito > Ver dados
       * Confira o registro do seu post
     * Este foi um exemplo de uma aplicação rodando localmento usando um banco de dados rodando em container.
-# Parte 4 - Entendendo a criação de containers.
+# Parte 4 - Entendendo a criação de imagens.
   * Toda vez que criamos um container, utilizamos de uma imagem como base que contém todos os arquivos necessários para executar nosso processo de forma isolada no container. Então uma imagem, nada mais é, do que um file system para criação do container.
   * Para criármos uma imagem de container temos duas abordagens:
     * Docker Commit (Pior formar)
@@ -72,8 +72,21 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
       * Criaremos uma imagem docker de uma aplicação mais simplificada com uso do dockerfile.
       * Baixe o repositório da aplicação Conversão de tempertatura:<br>
         git clone https://github.com/KubeDev/conversao-temperatura<br>
-        Uma aplicação bem simples, escrita em node.js, utilizando as prinipais bibliotecas que também utilzaremos na aplicação final desta maratona, então serve perfeitamente como exemplo para este propósito desta Parte 4 para criação de imagem:
-        
+      * Uma aplicação bem simples, escrita em node.js, utilizando as prinipais bibliotecas que também utilzaremos na aplicação final desta maratona, então serve perfeitamente como exemplo para este propósito desta Parte 4 para criação de imagem. É recomandado que se faça um fork no projeto.
+      * Usaremos novamente o gerenciador de pacotes do node.js, o npm, para baixar as bibliotecas que vamos utilizar executar nosso projeto como por exemplo express, body-parser, ejs...
+      * Dentro do diretório conversao-temperatura/src, onde tem o arquivo package.json, rode:
+        npm install
+      * Depois de concluído, você pode perceber um novo diretório, node_modules, com todas as bibliotecas utilizadas no projeto. Dentro deste existe uma grande quantidade de bibliotecas que se fazem necessárias por outras bibliotecas tbm dentro deste diretório.
+      * execute o projeto:
+        node server.js
+      * Acesse em seu navegador a aplicação:
+        localhost:8080
+      * Faça os testes de conversão de temperatura.
+  * Vamos fazer agora a contrução da imagem desta aplicação usando o Dockerfile.
+    * Crie o arquivo Dockerfile. Nele iremos declarar tudo que é necessário para criármos uma imagem a partir dele posteriomente. Todas as decarações, linha a linha do arquivo final do Dockerfile virá seguinte às explicações. 
+      * Primeiro vamos definir a imagem base que usaremos para criação posterior da imagem(Exato, uma imagem que compoê outra imagem). Como nossa aplicação é escrita em node.js e nós vamos precisar do node.js rodando no container, faz sentidor termos uma imagem dele declarado em nosso Dockefile. Para saber se já existe uma imagem do node, pesquisamos por "node" no Docker hub(principal repositório de imagens docker). Já no primeiro resultado podemos achar a imagem oficil do node, assim, declaramos em nosso Dockerfile FROM node.
+      * Em seguida vamos declarar nosso diretório de trabalho dentro do container, onde colocaremos todos os arquivos do projeto. Para isso, usamos o instrução WORKDIR /app (Pode ser qualquer diretório, desde que seja definido previamente.
+      * Em seguida vamos configurar nosso ambiente, da mesma forma que fizemos para rodar localmente, baixar os arquivo e as bibliotecas para rodar nossa apicação. Assim vamos primeiro copiar os arquivos que já temos em nossa máquina para a imagem com a instrução COPY package*json . 
 
 
 
