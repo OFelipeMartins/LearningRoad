@@ -80,7 +80,7 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
       * execute o projeto:
         node server.js
       * Acesse em seu navegador a aplicação:
-        localhost:8080
+        `localhost:8080`
       * Faça os testes de conversão de temperatura.
   * Vamos fazer agora a contrução da imagem desta aplicação usando o Dockerfile.
     * Crie o arquivo Dockerfile. Nele iremos declarar tudo que é necessário para criármos uma imagem a partir dele posteriomente. Todas as decarações, linha a linha do arquivo final do Dockerfile virá seguinte às explicações. 
