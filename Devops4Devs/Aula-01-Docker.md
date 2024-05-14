@@ -101,6 +101,12 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
         CMD ["node", "server.js"]
         EXPOSE 8080
         ```
+        * Esses foram apenas alguns dos comandos e declarações possíveis para se escolher na hora de criar um Dockerfile. Para mais opções, confira [aqui](https://docs.docker.com/reference/dockerfile/)
+        * Agora para construir a imagem, usamos o seguinte comando dentro do diretório src do proejeto:<br>
+          `docker build -t conversao-temperatura .`
+        * Confira a sua nova imagem criada e armazenada em sua máquina com o comando `docker image ls`
+        * Rode seu container usando a imagem que vc acabou de criar: `docker container run -d -p 8080:8080 conversao-temperatura`
+        * Acesse a aplicação pelo seu navegador: `localhost:8080` 
 
 
 
