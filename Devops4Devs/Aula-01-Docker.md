@@ -115,7 +115,10 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
     * `Seu_Namespace/Nome_Do_Seu_Repositório:tag`
   * Para editar o nome da nossa imagem:
     * docker tag conversao-temperatura Seu_Namespace/conversao-temperatura:v1
-
+    * Confira a alteração do nome com o comando: `docker image ls`
+  * Autentique-se com seu usuário do docker hub no seu ambiente linux com o comando: `docker login`
+  * Envie sua imagem para seu repositório no Docker Hub: `docker push seu_namespace/conversao-temperatura:v1`
+    * É uma boa prática você manter uma imagem com a tag latest, representando a última versão do seu projeto.
 
 
 
