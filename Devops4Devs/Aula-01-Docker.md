@@ -119,7 +119,7 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
   * Autentique-se com seu usuário do docker hub no seu ambiente linux com o comando: `docker login`
   * Envie sua imagem para seu repositório no Docker Hub: `docker push seu_namespace/conversao-temperatura:v1`
     * É uma boa prática você manter uma imagem com a tag latest, representando a última versão do seu projeto.
-
+    * Edite novamente o nome da imagem com a tag :latest e suba para seu repositório.  
 
 
 
