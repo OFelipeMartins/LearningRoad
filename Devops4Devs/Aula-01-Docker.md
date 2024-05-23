@@ -107,6 +107,12 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
         * Confira a sua nova imagem criada e armazenada em sua máquina com o comando `docker image ls`
         * Rode seu container usando a imagem que vc acabou de criar: `docker container run -d -p 8080:8080 conversao-temperatura`
         * Acesse a aplicação pelo seu navegador: `localhost:8080`
+       
+        * Boas práticas para declaração da imagem base(ex: node) no seu arquivo Dockerfile:
+          * Declare a versão da imagem que funciona para seu projeto. Imagens oficiais quando declaradas no arquivo Dockerfile, são sempre as mais recentes e isso pode interferir no restante da sua aplicação final. Para este caso, usaremos e declararemos como `FROM node:20.11.01`
+        * Docker ignore (.dockerignore) é um arquivo de texto onde se declara tudo que vc não quer que seja copiado para a imagem final. Para este caso não copiaremos o diretório node_modules/, uma vez que este já é criado com o comando `RUN npm install`
+        * Com isso, recrie sua imagem e já envie novamente para o repositório com o comando:
+         `docker build -t Seu_namescpace/conversao-temperatura:v1 --push .`
 # Parte 5 - Docker registry
   * Docker registry é um repositório onde guardaremos nossas imagens para que fique acessível a outras pessoas como membros da sua equipe e não fique apenas de forma local em sua máquina. Usaremos o Docker Hub para armazenar nossas imagens. Nele é possível cadastrar gratuitamente seus repositório, porém, só de forma pública.
   * Se cadastre no [Docker Hub](https://hub.docker.com/).
@@ -114,13 +120,12 @@ Entender e praticar criação de containers com Docker, usando um ambiente linux
   * Para enviarmos nossa imagem para este repositório, precisamos primeiro colocar o nome dela no formato padrão aceito pelo Docker hub:
     * `Seu_Namespace/Nome_Do_Seu_Repositório:tag`
   * Para editar o nome da nossa imagem:
-    * docker tag conversao-temperatura Seu_Namespace/conversao-temperatura:v1
+    * `docker tag conversao-temperatura Seu_Namespace/conversao-temperatura:v1`
     * Confira a alteração do nome com o comando: `docker image ls`
   * Autentique-se com seu usuário do docker hub no seu ambiente linux com o comando: `docker login`
   * Envie sua imagem para seu repositório no Docker Hub: `docker push seu_namespace/conversao-temperatura:v1`
     * É uma boa prática você manter uma imagem com a tag latest, representando a última versão do seu projeto.
-    * Edite novamente o nome da imagem com a tag :latest e suba para seu repositório.  
-
+    * Edite novamente o nome da imagem com a tag :latest e suba para seu repositório.
 
 
 
