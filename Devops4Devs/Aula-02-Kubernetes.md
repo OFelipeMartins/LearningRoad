@@ -35,8 +35,8 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
      * Um para os ferramentais para gerencia dos containers.
      * Outro usando proxy para fazer o load balancer na frente do clustes. Ainda que seja apenas um nó.
      * Por fim um terceiro como Woker Node
-   * Listes os cluster kubenertes criados: `k3d cluster list`
-     NAME          SERVERS   AGENTS   LOADBALANCER
+   * Listes os cluster kubenertes criados: `k3d cluster list`<br>
+     NAME          SERVERS   AGENTS   LOADBALANCER<br>
      k3s-default   1/1       0/0      true
    *  
 
