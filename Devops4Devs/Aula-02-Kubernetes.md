@@ -1,23 +1,33 @@
 # Introdução:<br>
-Nesta aula veremos o que são Containers e como o Docker facilita nossa criação e gestão destes container.
+Nesta aula veremos o que são Clustes e como o Kubernetes facilita nossa criação e gestão e orquestração de containers.
 
 # Objetivos:<br>
-Entender e praticar criação de containers com Docker, usando um ambiente linux virtualizado com WSL e usando Docker Hub para gerenciar as imagens que criaremos de nossos containers.
+Entender e praticar criação de clusters, criando um ambiente escalável com K3D para orquestrar nosso ambiente de containers.
 
 # Requisitos:<br>
-* Um ambiente linux.<br>
-  [WSL](https://www.youtube.com/watch?v=2X61S4mf6is&pp=ygUVZmFicsOtY2lvIHZlcm9uZXogd3Ns).
-* [Node.js e o gerenciador de pacote NPM instalado](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl).<br>
-* Docker<br>
-  [Instalado diretamento em sua distro WSL ou Docker Desktop instalado em seu SO](https://www.youtube.com/live/2X61S4mf6is?si=W-_caH2scFlPAETO&t=4392).<br>
-  Certifique-se de [criar um arquivo .wslconfig](https://www.youtube.com/live/O813vtoaXmc?si=NNkHa2n44eA20Itb&t=5427) no diretório de seu usuário contendo as seguintes declarações para limitação de CPU e Memória:<br>
-  \# Settings apply across all Linnux distros running on WSL 2<br>
-  [wsl2]
-  
-  \# Limits VM memory to use no more than 5GB, this can be set as whole number using GB or MB<br>
-  memory=5GB
-  
-  \# Sets de VM to use 4 virtual processors<br>
-  processors=4
+* Instalar K3D .<br>
+  [K3D](https://k3d.io/v5.6.3/).
+* [Kubectl]([https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl](https://kubernetes.io/pt-br/docs/tasks/tools/)).<br>
 
-# Parte 1 - Uma breve descrição de Docker:<br>
+# Parte 1 - Uma breve descrição de Clustes em Kubernetes:<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
