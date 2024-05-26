@@ -13,7 +13,7 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
  * O Kubernetes(K8s) é uma plataforma de orquestração de contêineres open-source que automatiza a implantação, o dimensionamento e o gerenciamento de aplicativos em contêineres. Imagine-o como um maestro de orquestra para seus contêineres, garantindo que eles funcionem em conjunto de forma harmoniosa e eficiente.
  * Já um Cluster Kubernetes é um grupo de máquinas virtuais ou servidores físicos que trabalham juntos para executar aplicativos em contêineres. O Kubernetes automatiza o gerenciamento desses clusters, tornando mais fácil implantar, dimensionar e gerenciar seus aplicativos.
  * A arquitetura do Kubernetes é composta da seguinte forma:
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.devops.dev%2Fkubernetes-components-and-architecture-8bc0b1d41754&psig=AOvVaw3adgmwK9fGybMhS5hosb2z&ust=1716646501020000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCXjNm8poYDFQAAAAAdAAAAABAE)
+![image](https://www.opsramp.com/wp-content/uploads/2022/07/Kubernetes-Architecture-1024x648.png)
 
 # Parte 2 - Criando um cluster kubernetes.
  * Formas e suas opções de ferramentas para criação:
