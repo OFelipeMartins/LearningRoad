@@ -27,6 +27,7 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
    * Local:
      * Minikube, K3S, MicroK8S, `kIND, k3D` (Utilizam container docker para executar a criação do ambiente local.
      * Vantagem: Ambientes Ready to go para criação de POCS
+     * Desvantagem: Não serve para ambiente produtivo.
  * Vamos criar o primerio cluster kubernetes:
    * Crie um cluster básico com o comando: `k3d cluster create`
    * Assim ele cria o cluster kubernetes com apenas um Worker Node e com nome de k3s-default. Ele configura também o kubectl e cria alguns container:
@@ -40,9 +41,23 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
      NAME          SERVERS   AGENTS   LOADBALANCER<br>
      k3s-default   1/1       0/0      true
      ```
+   * Delete o seu cluster: `k3d cluster delete`
+     * Para o cluter default não é necessário declarar o nome para deleção. 
    *  Crie um cluster com um nome que você escolheu, com mais agents e mais servers(Contro planes):
      `k3d cluster create meucluster --servers 3 --agents 3`
-
+   * Liste os containers que formam o cluster: `docker ps`
+   * Liste seu cluster, veja e confirme quantidade de servers e agents: k3d cluster list
+   * Delete seu cluster, dessa vez passando o nome: `k3d cluster delete meucluster` 
+# Parte 3 - Criando um deploy de sua aplicação em ambiente kubernetes.
+ * Quais elementos são criados no kubernetes e qual a função de cada um deles:
+   * Pod:
+     * É o menor objeto em um cluster kubernetes e é dentro deles que executamos nossos containers. Dentro deles podemos executar um ou mais containers. Eles dividem o mesmo endereço IP e, podem também, compartilhar sistemas de arquivos. Porém não é interessante se colocar todos seus elementos dentro de um mesmo POD pois, quando, falamos de repicar um ambiente, não estamos falando de replicar um container, mas sim um POD. Assim, criamos um pod para cada container. Usamos um POD para rodas mais de um container quando, por exemplo, temos um serviço como de coleta de logs para rodas paralelamente ao container principal do seu POD. 
+   * Labels e Selectors
+   * ReplicaSet
+     * Cuida da execução dos Pods, garantindo que a quantidade específicas de réplicas de um determinado pod é a que vai estar em execução no ambiente.
+   * Deployment
+     * Gerencia os Replicaset, em caso de alteração do código, ele cria um novo eplicaset que por consequência irá criar o novo ambiente de pods com os containers rodando a versão atualizada da aplicação.
+     * ![image](https://miro.medium.com/v2/resize:fit:1400/1*q5BhhIKnBqQqsngJG6EtQw.png)
 
 
 
