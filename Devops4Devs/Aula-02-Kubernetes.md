@@ -40,7 +40,8 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
      NAME          SERVERS   AGENTS   LOADBALANCER<br>
      k3s-default   1/1       0/0      true
      ```
-   *  
+   *  Crie um cluster com um nome que você escolheu, com mais agents e mais servers(Contro planes):
+     `k3d cluster create meucluster --servers 3 --agents 3`
 
 
 
