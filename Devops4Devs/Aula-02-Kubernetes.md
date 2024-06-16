@@ -56,8 +56,9 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
    * ReplicaSet
      * Cuida da execução dos Pods, garantindo que a quantidade específicas de réplicas de um determinado pod é a que vai estar em execução no ambiente.
    * Deployment
-     * Gerencia os Replicaset, em caso de alteração do código, ele cria um novo eplicaset que por consequência irá criar o novo ambiente de pods com os containers rodando a versão atualizada da aplicação.
+     * Gerencia os Replicaset. Em caso de alteração do código, ele atualiza a versaão da aplicação enquanto a antiga ainda está em funcionamento (ELe troca o pneu do carro com o carro em movimento), ele cria um novo replicaset que por consequência irá criar o novo ambiente de pods com os containers rodando a versão atualizada da aplicação.
      * ![image](https://miro.medium.com/v2/resize:fit:1400/1*q5BhhIKnBqQqsngJG6EtQw.png)
+     * 
 
 
 
