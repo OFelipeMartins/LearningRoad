@@ -52,13 +52,26 @@ Entender e praticar criação de clusters, criando um ambiente escalável com K3
  * Quais elementos são criados no kubernetes e qual a função de cada um deles:
    * Pod:
      * É o menor objeto em um cluster kubernetes e é dentro deles que executamos nossos containers. Dentro deles podemos executar um ou mais containers. Eles dividem o mesmo endereço IP e, podem também, compartilhar sistemas de arquivos. Porém não é interessante se colocar todos seus elementos dentro de um mesmo POD pois, quando, falamos de repicar um ambiente, não estamos falando de replicar um container, mas sim um POD. Assim, criamos um pod para cada container. Usamos um POD para rodas mais de um container quando, por exemplo, temos um serviço como de coleta de logs para rodas paralelamente ao container principal do seu POD. 
-   * Labels e Selectors
    * ReplicaSet
      * Cuida da execução dos Pods, garantindo que a quantidade específicas de réplicas de um determinado pod é a que vai estar em execução no ambiente.
    * Deployment
-     * Gerencia os Replicaset. Em caso de alteração do código, ele atualiza a versaão da aplicação enquanto a antiga ainda está em funcionamento (ELe troca o pneu do carro com o carro em movimento), ele cria um novo replicaset que por consequência irá criar o novo ambiente de pods com os containers rodando a versão atualizada da aplicação.
+     * Gerencia os Replicaset. Em caso de alteração do código, ele atualiza a versaão da aplicação enquanto a antiga ainda está em funcionamento (ELe troca o pneu do carro com o carro em movimento), ele cria um novo replicaset que por consequência irá criar o novo ambiente de pods com os containers rodando a versão atualizada da aplicação. Os delpyments lidam com coisas como:
+     * Rolling updates: Quando você atualiza a imagem do contêiner do seu aplicativo em uma implantação, ela cria um novo conjunto de réplicas com os pods atualizados e gradualmente aumenta os novos enquanto reduz os antigos. Isso minimiza o tempo de inatividade durante as atualizações.
+     * Rollbacks: Se uma atualização introduzir problemas, você pode facilmente reverter para uma versão anterior da implantação.
+     * Scalling: Você pode facilmente escalar seu aplicativo para cima ou para baixo ajustando o número desejado de réplicas na implantação.
      * ![image](https://miro.medium.com/v2/resize:fit:1400/1*q5BhhIKnBqQqsngJG6EtQw.png)
-     * 
+   * Labels e Selectors
+     * Faz a interligação entre os elementos(Pods, replicaset e deployment).
+   * Service Disciovery: 
+     * Faz a comunicação entre as aplicações. Tipos principais:
+       * ClusterIp
+       * NodePort
+       * LoadBalancer
+* Para criar tudo isso precisamos criar um Arquivo Manifesto. Um arquivo em formato .yaml onde define todos os objetos necessários.
+  * Neste arquivo manifesto tem as seguintes declarações por padrão:
+    * `apiVersion:
+    * 
+    * 
 
 
 
